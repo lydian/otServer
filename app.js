@@ -9,6 +9,7 @@ var express = require('express')
   , http = require('http')
   , path = require('path')
   , ot = require("ot")
+  , mongodb = require("mongodb")
   , codeMirror = require("./routes/codeMirror");
 
 var app = express();

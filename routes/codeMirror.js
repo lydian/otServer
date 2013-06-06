@@ -1,11 +1,25 @@
+
+var ot = require("ot");
+var Doc = function(sessionId){
+  this.sessionId = sessionId;
+  this.server = new ot.Server("");
+  this.onReceive = function(json){
+    
+  }
+  this.broadcast = function(){
+    //Todo: push data to MongoDB
+  }
+}
+var docs = {};
 exports.editor = function(req, res){
-  var ot = require("ot");
-  var session_id = req.params.id;
+  var sessionId = req.params.id;
   var json = req.body;
-  console.log(typeof json);
-  console.log(json);
-  var operation = ot.TextOperation.fromJSON(JSON.parse(json));
-  console.log(operation);
-  return res.send("");
+  
+  if(docs[sessionId] === undefined ) {
+    docs[sessionId] = new Doc();
+  }
+
+  //broadcast 
+  return res.send(docs);
   //return res.render("index", {"title": "editor"});
 };
