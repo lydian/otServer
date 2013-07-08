@@ -1,7 +1,7 @@
 ot Server
 ===========
 
-  test Commit
+  test
 
 Execution
 --------------
