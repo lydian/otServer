@@ -1,7 +1,7 @@
 ot Server
 ===========
 
-  test 12345
+  test
 
 Execution
 --------------
