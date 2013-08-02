@@ -1,8 +1,7 @@
 ot Server
 ===========
 
-  test 12345
-
+  test 12
 Execution
 --------------
 (First time) npm install 
